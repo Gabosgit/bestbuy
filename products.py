@@ -32,6 +32,7 @@ class Product:
             self.deactivate()
 
     def is_active(self):
+        """ Returns True or False depending on whether the product is active or not. """
         return self.active
 
     def activate(self):

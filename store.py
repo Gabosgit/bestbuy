@@ -30,7 +30,8 @@ class Store:
     def get_all_products(self):
         """
             Check if the product is active.
-            If it is not active it removes it from the products list to not show it and not count it as a purchase option.
+            If it is not active it removes it from the products list to not show it
+            and not count it as a purchase option.
             Prints a numbered list of products
         """
         print()
@@ -46,15 +47,17 @@ class Store:
         print()
 
 
-    def order(self, shopping_list):
-        """ Gets a list of tuples from the user. Each tuple contains the product index and the quantity of this product to order.
-            Returns the total price for the entire purchase
-        """
-        total_order = 0
-        for product, quantity in shopping_list:
-            total_product_price = product.buy(quantity) # Product price * quantity
-            total_order = total_order + total_product_price # Result of all products purchased
-        return total_order
+def order(shopping_list):
+    """
+        Gets a list of tuples from the user.
+        Each tuple contains the product index and the quantity of this product to order.
+        Returns the total price for the entire purchase
+    """
+    total_order = 0
+    for product, quantity in shopping_list:
+        total_product_price = product.buy(quantity) # Product price * quantity
+        total_order = total_order + total_product_price # Result of all products purchased
+    return total_order
 
 
 def main():

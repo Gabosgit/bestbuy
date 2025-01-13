@@ -36,10 +36,10 @@ def input_numeric(prompt):
             if input_user == "":
                 break
             if not input_user.isnumeric():
-                raise Exception(f"Expected a positive number")
+                raise Exception("Expected a positive number")
 
         except ValueError:
-            print(f"Expected a positive number")
+            print("Expected a positive number")
         except Exception as error:
             print(error)
         else:
@@ -48,12 +48,12 @@ def input_numeric(prompt):
 
 def print_menu():
     """ Prints the menu options """
-    print(f"\tStore Menu\n"
-          f"\t----------")
-    print(f"1. List all products in store\n"
-          f"2. Show total amount in store\n"
-          f"3. Make an order\n"
-          f"4. Quit")
+    print("\tStore Menu\n"
+          "\t----------")
+    print("1. List all products in store\n"
+          "2. Show total amount in store\n"
+          "3. Make an order\n"
+          "4. Quit")
 
 
 def order_menu(best_buy):
@@ -71,7 +71,7 @@ def order_menu(best_buy):
 
         if input_order_quantity == "" or input_order_product == "":
             print()
-            print(f"Order made! Total payment: {best_buy.order(order_list)}\n")
+            print(f"Order made! Total payment: {store.order(order_list)}\n")
             break
         else:
             get_product_from_list = best_buy.products_list[int(input_order_product) - 1]
