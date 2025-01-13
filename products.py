@@ -1,4 +1,9 @@
+""" This module manages product attributes.
+    It allows to calculate the total price for a given quantity of the product.
+"""
+
 class Product:
+    """ Allows you to create product instances with their own attributes """
     def __init__(self, name, price, quantity):
         self.name = name
         self.price = price

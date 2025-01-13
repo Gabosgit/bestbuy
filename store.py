@@ -1,3 +1,6 @@
+"""
+    This module manages the list of products in the store.
+"""
 import products
 
 class Store:
