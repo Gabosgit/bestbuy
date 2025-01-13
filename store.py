@@ -1,7 +1,6 @@
 """
     This module manages the list of products in the store.
 """
-import products
 
 class Store:
     """ Creates a store by starting it with a list of products """
@@ -61,6 +60,9 @@ def order(shopping_list):
 
 
 def main():
+    """
+        Main function to use store.py as module (?)
+    """
     pass
 
 
